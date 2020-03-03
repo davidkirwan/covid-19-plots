@@ -13,12 +13,15 @@ data <- read.table("covid-19.csv", header=TRUE, sep=",")
 
 # Correlation total confirmed vs total deaths
 print(cor(data$total_confirmed, data$total_deaths))
-lmMod <- lm(mortality_rate ~ total_deaths, data=data)  # build the model
+lmMod <- lm(total_deaths ~ total_confirmed, data=data)  # build the model
 summary (lmMod)
-distPred <- predict(lmMod, c(160000))  # predict distance
-print(distPred)
 
+date = c("04-03-2020")
+total_confirmed = c(180000)
+df = data.frame(date, total_confirmed)
 
+tdp <- predict(lmMod, df)  # predict death total at 180000
+print(tdp)
 
 # Create the plots
 png(filename="covid-19.png")
