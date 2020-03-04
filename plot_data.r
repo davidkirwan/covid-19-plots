@@ -26,7 +26,8 @@ print(tdp)
 # Create the plots
 png(filename="covid-19.png")
 plot(data$date, data$total_confirmed, type="l", main="COVID-19", xlab = "Date", ylab = "Number")
-legend(1, 90000, legend=c("Total Confirmed", "Total Infected", "Total Recovered", "Total Deaths"),
+colMax <- max(data$total_confirmed, na.rm = TRUE)
+legend(1, colMax, legend=c("Total Confirmed", "Total Infected", "Total Recovered", "Total Deaths"),
        col=c("blue", "orange", "green", "red"), lty=1:2, cex=0.8)
 lines(data$total_confirmed~data$date, col='blue', lwd=2)
 lines(data$total_infected~data$date, col='orange', lwd=2)
