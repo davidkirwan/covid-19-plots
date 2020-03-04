@@ -25,7 +25,8 @@ print(tdp)
 
 # Create the plots
 png(filename="covid-19.png")
-plot(data$date, data$total_confirmed, type="l", main="COVID-19", xlab = "Date", ylab = "Number")
+par(mar=c(6.1,4.1,4.1,2.1))
+plot(data$date, data$total_confirmed, type="l", main="COVID-19", xlab = "", ylab = "", las=2)
 colMax <- max(data$total_confirmed, na.rm = TRUE)
 legend(1, colMax, legend=c("Total Confirmed", "Total Infected", "Total Recovered", "Total Deaths"),
        col=c("blue", "orange", "green", "red"), lty=1:2, cex=0.8)
@@ -36,7 +37,8 @@ lines(data$total_deaths~data$date, col='red', lwd=2)
 dev.off()
 
 png(filename="covid-19_deaths.png")
-plot(data$date, data$total_deaths, type="l", main="COVID-19 Deaths", xlab = "Date", ylab = "Number")
+par(mar=c(6.1,4.1,4.1,2.1))
+plot(data$date, data$total_deaths, type="l", main="COVID-19 Deaths", xlab = "", ylab = "", las=2)
 colMax <- max(data$total_deaths, na.rm = TRUE)
 legend(1, colMax, legend=c("Total Deaths"),
        col=c("red"), lty=1:2, cex=0.8)
@@ -44,7 +46,8 @@ lines(data$total_deaths~data$date, col='red', lwd=2)
 dev.off()
 
 png(filename="covid-19_mortality_rate.png")
-plot(data$date, data$mortality_rate, type="l", main="COVID-19 Mortality Rate %", xlab = "Date", ylab = "Number")
+par(mar=c(6.1,4.1,4.1,2.1))
+plot(data$date, data$mortality_rate, type="l", main="COVID-19 Mortality Rate %", xlab = "", ylab = "", las=2)
 colMax <- max(data$mortality_rate, na.rm = TRUE)
 legend(1, colMax, legend=c("Mortality Rate"),
        col=c("red"), lty=1:2, cex=0.8)
