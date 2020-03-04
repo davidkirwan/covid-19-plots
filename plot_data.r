@@ -26,9 +26,12 @@ print(tdp)
 # Create the plots
 png(filename="covid-19.png")
 par(mar=c(6.1,4.1,4.1,2.1))
-plot(data$date, data$total_confirmed, type="l", main="COVID-19", xlab = "", ylab = "", las=2)
-colMax <- max(data$total_confirmed, na.rm = TRUE)
-legend(1, colMax, legend=c("Total Confirmed", "Total Infected", "Total Recovered", "Total Deaths"),
+colYMax <- max(data$total_confirmed, na.rm = TRUE)
+colXMax <- length(data$date)
+plot(1, type="n", main="COVID-19", xlab="", axes=FALSE, ylab="", xlim=c(0, colXMax), ylim=c(0, colYMax), las=2)
+axis(1, at=1:colXMax, las=2, lab=data$date)
+axis(2, at=seq(0, max(data$total_confirmed), by=30000), las=1)
+legend(1, colYMax, legend=c("Total Confirmed", "Total Infected", "Total Recovered", "Total Deaths"),
        col=c("blue", "orange", "green", "red"), lty=1:2, cex=0.8)
 lines(data$total_confirmed~data$date, col='blue', lwd=2)
 lines(data$total_infected~data$date, col='orange', lwd=2)
@@ -38,18 +41,24 @@ dev.off()
 
 png(filename="covid-19_deaths.png")
 par(mar=c(6.1,4.1,4.1,2.1))
-plot(data$date, data$total_deaths, type="l", main="COVID-19 Deaths", xlab = "", ylab = "", las=2)
-colMax <- max(data$total_deaths, na.rm = TRUE)
-legend(1, colMax, legend=c("Total Deaths"),
+colYMax <- max(data$total_deaths, na.rm = TRUE)
+colXMax <- length(data$date)
+plot(1, type="n", main="COVID-19 Deaths", axes=FALSE, xlab="", ylab="", xlim=c(0, colXMax), ylim=c(0, colYMax), las=2)
+axis(1, at=1:colXMax, las=2, lab=data$date)
+axis(2, at=seq(0, max(data$total_deaths), by=500), las=1)
+legend(1, colYMax, legend=c("Total Deaths"),
        col=c("red"), lty=1:2, cex=0.8)
 lines(data$total_deaths~data$date, col='red', lwd=2)
 dev.off()
 
 png(filename="covid-19_mortality_rate.png")
 par(mar=c(6.1,4.1,4.1,2.1))
-plot(data$date, data$mortality_rate, type="l", main="COVID-19 Mortality Rate %", xlab = "", ylab = "", las=2)
-colMax <- max(data$mortality_rate, na.rm = TRUE)
-legend(1, colMax, legend=c("Mortality Rate"),
+colYMax <- max(data$mortality_rate, na.rm = TRUE)
+colXMax <- length(data$date)
+plot(1, type="n", main="COVID-19 Mortality Rate %", axes=FALSE, xlab="", ylab="", xlim=c(0, colXMax), ylim=c(0, colYMax), las=2)
+axis(1, at=1:colXMax, las=2, lab=data$date)
+axis(2, at=seq(0, max(data$mortality_rate), by=0.2), las=1)
+legend(1, colYMax, legend=c("Total Mortality Rate %"),
        col=c("red"), lty=1:2, cex=0.8)
 lines(data$mortality_rate~data$date, col='red', lwd=2)
 dev.off()
