@@ -3,15 +3,12 @@ Generate plots from the raw https://github.com/CSSEGISandData/COVID-19[CSSEGISan
 
 .COVID-19
 [#img-covid19]
-[caption="Figure 1: COVID-19"]
 image::covid-19.png[covid19]
 
 .COVID-19 Deaths
 [#img-covid19-d]
-[caption="Figure 1: COVID-19"]
 image::covid-19_deaths.png[covid19-d]
 
 .COVID-19 Mortality Rate
 [#img-covid19-m]
-[caption="Figure 1: COVID-19"]
 image::covid-19_mortality_rate.png[covid19-m]
