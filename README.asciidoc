@@ -25,6 +25,6 @@ The following are required to clone the repo containing the raw data, process th
 To build the plots do the following:
 
 - Clone the https://github.com/CSSEGISandData/COVID-19[CSSEGISandData/COVID-19] repo locally
-- Update the variable _data_dir_ in the _write_csv.rb_ Ruby script to point at the location where the repo was cloned in the previous step.
+- Update the variable `+data_dir+` in the `+write_csv.rb+` Ruby script to point at the location where the repo was cloned in the previous step.
 - Run the data processing Ruby script `+ruby write_csv.rb+`
 - Run the plot generation R script `+Rscript plot_data.r+`
