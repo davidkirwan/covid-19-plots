@@ -25,7 +25,7 @@ print(tdp)
 
 # Create the plots
 png(filename="covid-19.png")
-par(mar=c(6.1,4.1,4.1,2.1))
+par(mar=c(6.1,6.1,4.1,2.1))
 colYMax <- max(data$total_confirmed, na.rm = TRUE)
 colXMax <- length(data$date)
 plot(1, type="n", main="COVID-19", xlab="", axes=FALSE, ylab="", xlim=c(0, colXMax), ylim=c(0, colYMax), las=2)
