@@ -16,11 +16,11 @@ print(cor(data$total_confirmed, data$total_deaths))
 lmMod <- lm(total_deaths ~ total_confirmed, data=data)  # build the model
 summary (lmMod)
 
-date = c("04-03-2020")
-total_confirmed = c(180000)
+date = c("01-06-2020", "02-06-2020")
+total_confirmed = c(180000, 1000000)
 df = data.frame(date, total_confirmed)
 
-tdp <- predict(lmMod, df)  # predict death total at 180000
+tdp <- predict(lmMod, df)  # predict death total at 180000, 1000000
 print(tdp)
 
 # Create the plots
