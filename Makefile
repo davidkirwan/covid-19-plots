@@ -1,5 +1,14 @@
+####################################################################################################
+# @author David Kirwan https://github.com/davidkirwan
+# @description Makefile for pulling latest raw COVID-19 data, processing and plotting
+#
+# @usage make
+#
+# @date 2020-03-27
+####################################################################################################
 REPO=/home/dkirwan/files/git_repos/github/COVID-19/
 DATA=$(REPO)/csse_covid_19_data/csse_covid_19_daily_reports/
+##############################
 .DEFAULT_GOAL:=help
 
 .PHONY: help
