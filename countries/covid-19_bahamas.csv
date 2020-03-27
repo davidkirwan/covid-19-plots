@@ -1,0 +1,6 @@
+date,total_confirmed,total_deaths,total_recovered,total_infected,mortality_rate,recovery_rate
+03-22-2020,4,0,0,4,0.0,0.0
+03-23-2020,4,0,0,4,0.0,0.0
+03-24-2020,5,0,1,4,0.0,20.0
+03-25-2020,5,0,1,4,0.0,20.0
+03-26-2020,9,0,1,8,0.0,11.11
