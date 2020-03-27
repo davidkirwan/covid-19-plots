@@ -27,4 +27,7 @@ To build the plots do the following:
 - Clone the https://github.com/CSSEGISandData/COVID-19[CSSEGISandData/COVID-19] repo locally
 - Update the variable `+data_dir+` in the `+write_csv.rb+` Ruby script to point at the location where the repo was cloned in the previous step.
 - Run the data processing Ruby script `+ruby write_csv.rb+`
+- Run the data processing per country Ruby script `+ruby write_per_country_csv.rb+`
 - Run the plot generation R script `+Rscript plot_data.r+`
+- Run the plot generation per country R script `+Rscript plot_data_per_country.r+`
+- Data and plots will be in the base directory, or the `+countries+` directory.
