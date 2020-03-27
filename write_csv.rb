@@ -14,7 +14,9 @@ CSV.open("covid-19.csv", "wb") do |csv|
 
   # Read in the data
   # https://github.com/CSSEGISandData/COVID-19
-  data_dir = "/home/dkirwan/files/git_repos/github/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/"
+  # ARGV[0] should contain path on disk to the location where this repo has been cloned to
+  puts ARGV[0]
+  data_dir = ARGV[0]
 
   csv_files = Dir[data_dir+"*.csv"].sort
   csv_files.each do |csv_file|
