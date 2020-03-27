@@ -63,7 +63,4 @@ date,total_confirmed,total_deaths,total_recovered,total_infected,mortality_rate,
 03-23-2020,378287,16497,100958,277329,4.36,26.69
 03-24-2020,417966,18615,107705,310261,4.45,25.77
 03-25-2020,467594,21181,113770,353824,4.53,24.33
-<<<<<<< HEAD
-=======
 03-26-2020,529591,23970,122150,407441,4.53,23.06
->>>>>>> df9f2f0... Ruby script for creating data which will feed into new plots shortly
