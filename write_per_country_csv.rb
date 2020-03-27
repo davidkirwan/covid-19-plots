@@ -66,12 +66,12 @@ end
 
 countries_list = data.last.keys
 
-CSV.open("countries/covid-19_countries_list.csv", "wb") do |csx|
+CSV.open("covid-19_countries_list.csv", "wb") do |csx|
   # Write the CSV report titles
   csx << ["Country Name", "key"]
 
   countries_list.each do |c|
-    c_name = c.downcase.strip.tr(" ", "_").tr("(", "").tr(")","").tr("*","").tr("'","")
+    c_name = c.downcase.strip.tr(" ", "_").tr("(", "").tr(")","").tr("*","").tr("'","").tr(",", "")
     puts c_name
     csx << [c, c_name]
     CSV.open("countries/covid-19_#{c_name}.csv", "wb") do |csv|
