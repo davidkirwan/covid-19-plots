@@ -22,7 +22,7 @@ for(i in 1:nrow(countries)){
   data <- read.table(file_name, header=TRUE, sep=",")
 
   # Create the plots
-  png(filename=paste("covid-19_", countries$key[i], ".png", sep=""))
+  png(filename=paste("countries/covid-19_", countries$key[i], ".png", sep=""))
   par(mar=c(6.1,6.1,4.1,2.1))
   colYMax <- max(data$total_confirmed, na.rm = TRUE)
   colXMax <- length(data$date)
@@ -37,7 +37,7 @@ for(i in 1:nrow(countries)){
   lines(data$total_deaths~data$date, col='red', lwd=2)
   dev.off()
 
-  png(filename=paste("covid-19_", countries$key[i], "_deaths.png", sep=""))
+  png(filename=paste("countries/covid-19_", countries$key[i], "_deaths.png", sep=""))
   par(mar=c(6.1,5.1,4.1,2.1))
   colYMax <- max(data$total_deaths, na.rm = TRUE)
   colXMax <- length(data$date)
@@ -49,7 +49,7 @@ for(i in 1:nrow(countries)){
   lines(data$total_deaths~data$date, col='red', lwd=2)
   dev.off()
 
-  png(filename=paste("covid-19_", countries$key[i], "_mortality_rate.png", sep=""))
+  png(filename=paste("countries/covid-19_", countries$key[i], "_mortality_rate.png", sep=""))
   par(mar=c(6.1,5.1,4.1,2.1))
   colYMax <- max(data$mortality_rate, na.rm = TRUE)
   colXMax <- length(data$date)
