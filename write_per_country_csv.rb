@@ -66,23 +66,29 @@ end
 
 countries_list = data.last.keys
 
-countries_list.each do |c|
-  c_name = c.downcase.strip.tr(" ", "_").tr("(", "").tr(")","").tr("*","").tr("'","")
-  puts c_name
-  CSV.open("countries/covid-19_#{c_name}.csv", "wb") do |csv|
-    # Write the CSV report titles
-    csv << ["date", "total_confirmed", "total_deaths", "total_recovered", "total_infected", "mortality_rate", "recovery_rate"]
-    data.each do |d|
-      unless d[c].nil?
-        date = d[c]["date"]
-        total_confirmed = d[c]["total_confirmed"]
-        total_deaths = d[c]["total_deaths"]
-        total_recovered = d[c]["total_recovered"]
-        total_infected = d[c]["total_infected"]
-        mortality_rate = d[c]["mortality_rate"]
-        recovery_rate = d[c]["recovery_rate"]
+CSV.open("countries/covid-19_countries_list.csv", "wb") do |csx|
+  # Write the CSV report titles
+  csx << ["Country Name", "key"]
 
-        csv << [date, total_confirmed, total_deaths, total_recovered, total_infected, mortality_rate, recovery_rate]
+  countries_list.each do |c|
+    c_name = c.downcase.strip.tr(" ", "_").tr("(", "").tr(")","").tr("*","").tr("'","")
+    puts c_name
+    csx << [c, c_name]
+    CSV.open("countries/covid-19_#{c_name}.csv", "wb") do |csv|
+      # Write the CSV report titles
+      csv << ["date", "total_confirmed", "total_deaths", "total_recovered", "total_infected", "mortality_rate", "recovery_rate"]
+      data.each do |d|
+        unless d[c].nil?
+          date = d[c]["date"]
+          total_confirmed = d[c]["total_confirmed"]
+          total_deaths = d[c]["total_deaths"]
+          total_recovered = d[c]["total_recovered"]
+          total_infected = d[c]["total_infected"]
+          mortality_rate = d[c]["mortality_rate"]
+          recovery_rate = d[c]["recovery_rate"]
+
+          csv << [date, total_confirmed, total_deaths, total_recovered, total_infected, mortality_rate, recovery_rate]
+       end
       end
     end
   end

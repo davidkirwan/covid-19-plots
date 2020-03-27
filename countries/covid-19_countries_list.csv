@@ -1,0 +1,176 @@
+Country Name,key
+US,us
+Canada,canada
+China,china
+Netherlands,netherlands
+Australia,australia
+United Kingdom,united_kingdom
+Denmark,denmark
+France,france
+Afghanistan,afghanistan
+Albania,albania
+Algeria,algeria
+Andorra,andorra
+Angola,angola
+Antigua and Barbuda,antigua_and_barbuda
+Argentina,argentina
+Armenia,armenia
+Austria,austria
+Azerbaijan,azerbaijan
+Bahamas,bahamas
+Bahrain,bahrain
+Bangladesh,bangladesh
+Barbados,barbados
+Belarus,belarus
+Belgium,belgium
+Belize,belize
+Benin,benin
+Bhutan,bhutan
+Bolivia,bolivia
+Bosnia and Herzegovina,bosnia_and_herzegovina
+Brazil,brazil
+Brunei,brunei
+Bulgaria,bulgaria
+Burkina Faso,burkina_faso
+Cabo Verde,cabo_verde
+Cambodia,cambodia
+Cameroon,cameroon
+Central African Republic,central_african_republic
+Chad,chad
+Chile,chile
+Colombia,colombia
+Congo (Brazzaville),congo_brazzaville
+Congo (Kinshasa),congo_kinshasa
+Costa Rica,costa_rica
+Cote d'Ivoire,cote_divoire
+Croatia,croatia
+Cuba,cuba
+Cyprus,cyprus
+Czechia,czechia
+Diamond Princess,diamond_princess
+Djibouti,djibouti
+Dominica,dominica
+Dominican Republic,dominican_republic
+Ecuador,ecuador
+Egypt,egypt
+El Salvador,el_salvador
+Equatorial Guinea,equatorial_guinea
+Eritrea,eritrea
+Estonia,estonia
+Eswatini,eswatini
+Ethiopia,ethiopia
+Fiji,fiji
+Finland,finland
+Gabon,gabon
+Gambia,gambia
+Georgia,georgia
+Germany,germany
+Ghana,ghana
+Greece,greece
+Grenada,grenada
+Guatemala,guatemala
+Guinea,guinea
+Guinea-Bissau,guinea-bissau
+Guyana,guyana
+Haiti,haiti
+Holy See,holy_see
+Honduras,honduras
+Hungary,hungary
+Iceland,iceland
+India,india
+Indonesia,indonesia
+Iran,iran
+Iraq,iraq
+Ireland,ireland
+Israel,israel
+Italy,italy
+Jamaica,jamaica
+Japan,japan
+Jordan,jordan
+Kazakhstan,kazakhstan
+Kenya,kenya
+"Korea, South","korea,_south"
+Kosovo,kosovo
+Kuwait,kuwait
+Kyrgyzstan,kyrgyzstan
+Laos,laos
+Latvia,latvia
+Lebanon,lebanon
+Liberia,liberia
+Libya,libya
+Liechtenstein,liechtenstein
+Lithuania,lithuania
+Luxembourg,luxembourg
+Madagascar,madagascar
+Malaysia,malaysia
+Maldives,maldives
+Mali,mali
+Malta,malta
+Mauritania,mauritania
+Mauritius,mauritius
+Mexico,mexico
+Moldova,moldova
+Monaco,monaco
+Mongolia,mongolia
+Montenegro,montenegro
+Morocco,morocco
+Mozambique,mozambique
+Namibia,namibia
+Nepal,nepal
+New Zealand,new_zealand
+Nicaragua,nicaragua
+Niger,niger
+Nigeria,nigeria
+North Macedonia,north_macedonia
+Norway,norway
+Oman,oman
+Pakistan,pakistan
+Panama,panama
+Papua New Guinea,papua_new_guinea
+Paraguay,paraguay
+Peru,peru
+Philippines,philippines
+Poland,poland
+Portugal,portugal
+Qatar,qatar
+Romania,romania
+Russia,russia
+Rwanda,rwanda
+Saint Kitts and Nevis,saint_kitts_and_nevis
+Saint Lucia,saint_lucia
+Saint Vincent and the Grenadines,saint_vincent_and_the_grenadines
+San Marino,san_marino
+Saudi Arabia,saudi_arabia
+Senegal,senegal
+Serbia,serbia
+Seychelles,seychelles
+Singapore,singapore
+Slovakia,slovakia
+Slovenia,slovenia
+Somalia,somalia
+South Africa,south_africa
+Spain,spain
+Sri Lanka,sri_lanka
+Sudan,sudan
+Suriname,suriname
+Sweden,sweden
+Switzerland,switzerland
+Syria,syria
+Taiwan*,taiwan
+Tanzania,tanzania
+Thailand,thailand
+Timor-Leste,timor-leste
+Togo,togo
+Trinidad and Tobago,trinidad_and_tobago
+Tunisia,tunisia
+Turkey,turkey
+Uganda,uganda
+Ukraine,ukraine
+United Arab Emirates,united_arab_emirates
+Uruguay,uruguay
+Uzbekistan,uzbekistan
+Venezuela,venezuela
+Vietnam,vietnam
+West Bank and Gaza,west_bank_and_gaza
+Zambia,zambia
+Zimbabwe,zimbabwe
