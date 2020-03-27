@@ -35,7 +35,7 @@ plot: ## Plot the latest raw data from  CSSEGISandData/COVID-19 and generate plo
 ##@ Push data
 
 .PHONY: push
-pull: ## Push up the latest processed data and plots to davidkirwan/covid-19-plots
+push: ## Push up the latest processed data and plots to davidkirwan/covid-19-plots
 	git add .
 	git commit -m "latest data"
 	git push origin master
