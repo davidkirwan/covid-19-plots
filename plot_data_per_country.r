@@ -49,7 +49,7 @@ for(i in 1:nrow(countries)){
   lines(data$total_deaths~data$date, col='red', lwd=2)
   dev.off()
 
-  png(filename=paste("covid-19_", countries$key[i], "_mortality_rate.png"))
+  png(filename=paste("covid-19_", countries$key[i], "_mortality_rate.png", sep=""))
   par(mar=c(6.1,5.1,4.1,2.1))
   colYMax <- max(data$mortality_rate, na.rm = TRUE)
   colXMax <- length(data$date)
@@ -58,7 +58,7 @@ for(i in 1:nrow(countries)){
   if(is.na(max(data$mortality_rate))){
     print("mortality_rate must be NA or something")
   } else {
-    axis(2, at=seq(0, max(data$mortality_rate), by=0.1), las=1)
+    axis(2, at=seq(0, colYMax, by=0.1), las=1)
   }
   legend(1, colYMax, legend=c("Total Mortality Rate %"),
          col=c("red"), lty=1:2, cex=0.8)
