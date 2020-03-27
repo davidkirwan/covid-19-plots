@@ -28,7 +28,7 @@ for(i in 1:nrow(countries)){
   colXMax <- length(data$date)
   plot(1, type="n", main=paste("COVID-19", countries$Country.Name[i]), xlab="", axes=FALSE, ylab="", xlim=c(0, colXMax), ylim=c(0, colYMax), las=2)
   axis(1, at=1:colXMax, las=2, lab=data$date)
-  axis(2, at=seq(0, max(data$total_confirmed), by=max(data$total_confirmed)/5), las=1)
+  axis(2, at=seq(0, colYMax, by=max(data$total_confirmed)/5), las=1)
   legend(1, colYMax, legend=c("Total Confirmed", "Total Infected", "Total Recovered", "Total Deaths"),
          col=c("blue", "orange", "green", "red"), lty=1:2, cex=0.8)
   lines(data$total_confirmed~data$date, col='blue', lwd=2)
@@ -43,7 +43,7 @@ for(i in 1:nrow(countries)){
   colXMax <- length(data$date)
   plot(1, type="n", main=paste("COVID-19", countries$Country.Name[i], "Deaths"), axes=FALSE, xlab="", ylab="", xlim=c(0, colXMax), ylim=c(0, colYMax), las=2)
   axis(1, at=1:colXMax, las=2, lab=data$date)
-  axis(2, at=seq(0, max(data$total_deaths), by=max(data$total_deaths)/5), las=1)
+  axis(2, at=seq(0, colYMax, by=max(data$total_deaths)/5), las=1)
   legend(1, colYMax, legend=c("Total Deaths"),
          col=c("red"), lty=1:2, cex=0.8)
   lines(data$total_deaths~data$date, col='red', lwd=2)
@@ -55,11 +55,7 @@ for(i in 1:nrow(countries)){
   colXMax <- length(data$date)
   plot(1, type="n", main=paste("COVID-19", countries$Country.Name[i], "Mortality Rate %"), axes=FALSE, xlab="", ylab="", xlim=c(0, colXMax), ylim=c(2, colYMax), las=2)
   axis(1, at=1:colXMax, las=2, lab=data$date)
-  if(is.na(max(data$mortality_rate))){
-    print("mortality_rate must be NA or something")
-  } else {
-    axis(2, at=seq(0, colYMax, by=0.1), las=1)
-  }
+  axis(2, at=seq(0, colYMax, by=0.1), las=1)
   legend(1, colYMax, legend=c("Total Mortality Rate %"),
          col=c("red"), lty=1:2, cex=0.8)
   lines(data$mortality_rate~data$date, col='red', lwd=2)
