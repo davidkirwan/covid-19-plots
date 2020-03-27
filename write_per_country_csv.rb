@@ -40,6 +40,9 @@ csv_files.each do |csv_file|
     if c == "Mainland China"
       c = "China"
     end
+    if c == "Korea, South"
+      c = "South Korea"
+    end
     if countries[c].nil?
       countries[c] = {
         "date" => File.basename(csv_file, ".*"),
