@@ -50,3 +50,6 @@ push: ## Push up the latest processed data and plots to davidkirwan/covid-19-plo
 	git add .
 	git commit -m "latest data"
 	git push origin master
+
+.PHONY: all
+all: pull process plot push ## Pull, process, plot, push all in one
