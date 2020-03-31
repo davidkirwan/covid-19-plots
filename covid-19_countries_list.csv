@@ -1,10 +1,10 @@
 Country Name,key
 US,us
 Canada,canada
+United Kingdom,united_kingdom
 China,china
 Netherlands,netherlands
 Australia,australia
-United Kingdom,united_kingdom
 Denmark,denmark
 France,france
 Afghanistan,afghanistan
@@ -28,10 +28,12 @@ Benin,benin
 Bhutan,bhutan
 Bolivia,bolivia
 Bosnia and Herzegovina,bosnia_and_herzegovina
+Botswana,botswana
 Brazil,brazil
 Brunei,brunei
 Bulgaria,bulgaria
 Burkina Faso,burkina_faso
+Burma,burma
 Cabo Verde,cabo_verde
 Cambodia,cambodia
 Cameroon,cameroon
@@ -101,6 +103,7 @@ Libya,libya
 Liechtenstein,liechtenstein
 Lithuania,lithuania
 Luxembourg,luxembourg
+MS Zaandam,ms_zaandam
 Madagascar,madagascar
 Malaysia,malaysia
 Maldives,maldives
