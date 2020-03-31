@@ -24,9 +24,7 @@ help: ## Show this help screen
 
 .PHONY: pull
 pull: ## Pull down the latest raw data from  CSSEGISandData/COVID-19
-	cd $(REPO)
-	git pull origin master
-	cd -
+	cd $(REPO) && git pull origin master && cd -
 
 
 ##############################
