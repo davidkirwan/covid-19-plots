@@ -13,6 +13,11 @@ image::covid-19_deaths.png[covid19-d]
 [#img-covid19-m]
 image::covid-19_mortality_rate.png[covid19-m]
 
+.COVID-19 Daily Growth Rate
+[#img-covid19-g]
+image::covid-19_daily_growth_rate.png[covid19-g]
+
+
 === Prerequisites:
 The following are required to clone the repo containing the raw data, process the data and build the plots etc:
 

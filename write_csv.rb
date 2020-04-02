@@ -7,10 +7,11 @@
 ######################################################
 require "csv"
 
+previous_total_infected = 0
 
 CSV.open("covid-19.csv", "wb") do |csv|
   # Write the CSV report titles
-  csv << ["date", "total_confirmed", "total_deaths", "total_recovered", "total_infected", "mortality_rate", "recovery_rate"]
+  csv << ["date", "total_confirmed", "total_deaths", "total_recovered", "total_infected", "mortality_rate", "recovery_rate", "daily_growth_rate"]
 
   # Read in the data
   # https://github.com/CSSEGISandData/COVID-19
@@ -44,6 +45,14 @@ CSV.open("covid-19.csv", "wb") do |csv|
     mortality_rate = (total_deaths.to_f / total_confirmed * 100).round(2)
     recovery_rate = (total_recovered.to_f / total_confirmed * 100).round(2)
 
+    if previous_total_infected == 0
+      daily_growth_rate = 0
+    else
+      daily_growth_rate = '%.2f' % ((total_infected - previous_total_infected).abs.to_f / previous_total_infected)
+    end
+
+    previous_total_infected = total_infected
+
     date = File.basename(csv_file, ".*")
     puts "Data for day: #{date}"
     puts "Total Confirmed: #{total_confirmed}"
@@ -52,6 +61,7 @@ CSV.open("covid-19.csv", "wb") do |csv|
     puts "Total Infected: #{total_infected}"
     puts "Mortality Rate: #{mortality_rate}%"
     puts "Recovery Rate: #{recovery_rate}%"
-    csv << [date, total_confirmed, total_deaths, total_recovered, total_infected, mortality_rate, recovery_rate]
+    puts "Daily Growth Rate: #{daily_growth_rate}"
+    csv << [date, total_confirmed, total_deaths, total_recovered, total_infected, mortality_rate, recovery_rate, daily_growth_rate]
   end
 end

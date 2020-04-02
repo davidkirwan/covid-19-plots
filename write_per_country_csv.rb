@@ -54,7 +54,9 @@ csv_files.each do |csv_file|
         "total_recovered" => i[recovered].to_i,
         "total_infected" => i[confirmed].to_i - i[recovered].to_i,
         "mortality_rate" => (i[deaths].to_f / i[confirmed].to_i * 100).round(2),
-        "recovery_rate" => (i[recovered].to_f / i[confirmed].to_i * 100).round(2)
+        "recovery_rate" => (i[recovered].to_f / i[confirmed].to_i * 100).round(2),
+        "daily_growth_rate" => 0.0,
+        "previous_total_confirmed" => 0
       }
     else
       countries[c]["date"] = File.basename(csv_file, ".*")
@@ -64,6 +66,13 @@ csv_files.each do |csv_file|
       countries[c]["total_infected"] = countries[c]["total_confirmed"] - countries[c]["total_recovered"]
       countries[c]["mortality_rate"] = (countries[c]["total_deaths"].to_f / countries[c]["total_confirmed"] * 100).round(2)
       countries[c]["recovery_rate"] = (countries[c]["total_recovered"].to_f / countries[c]["total_confirmed"] * 100).round(2)
+      unless data.last.nil? || data.last[c].nil?
+        countries[c]["previous_total_confirmed"] = data.last[c]["total_confirmed"]
+	countries[c]["daily_growth_rate"] = ((countries[c]["total_confirmed"] - countries[c]["previous_total_confirmed"]).abs.to_f / countries[c]["previous_total_confirmed"]).abs.round(2)
+      else
+        countries[c]["previous_total_confirmed"] = 0
+        countries[c]["daily_growth_rate"] = 0
+      end
     end
   end
 
@@ -82,7 +91,7 @@ CSV.open("covid-19_countries_list.csv", "wb") do |csx|
     csx << [c, c_name]
     CSV.open("countries/covid-19_#{c_name}.csv", "wb") do |csv|
       # Write the CSV report titles
-      csv << ["date", "total_confirmed", "total_deaths", "total_recovered", "total_infected", "mortality_rate", "recovery_rate"]
+      csv << ["date", "total_confirmed", "total_deaths", "total_recovered", "total_infected", "mortality_rate", "recovery_rate", "daily_growth_rate"]
       data.each do |d|
         unless d[c].nil?
           date = d[c]["date"]
@@ -92,8 +101,9 @@ CSV.open("covid-19_countries_list.csv", "wb") do |csx|
           total_infected = d[c]["total_infected"]
           mortality_rate = d[c]["mortality_rate"]
           recovery_rate = d[c]["recovery_rate"]
+          daily_growth_rate = d[c]["daily_growth_rate"]
 
-          csv << [date, total_confirmed, total_deaths, total_recovered, total_infected, mortality_rate, recovery_rate]
+          csv << [date, total_confirmed, total_deaths, total_recovered, total_infected, mortality_rate, recovery_rate, daily_growth_rate]
        end
       end
     end
