@@ -6,6 +6,8 @@
 #
 # @date 2020-03-27
 ####################################################################################################
+options(show.error.locations = TRUE)
+traceback()
 
 # Read the Countries names data in
 # ["Country Name","key"]

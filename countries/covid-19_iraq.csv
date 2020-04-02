@@ -1,6 +1,6 @@
 date,total_confirmed,total_deaths,total_recovered,total_infected,mortality_rate,recovery_rate,daily_growth_rate
 02-23-2020,0,0,0,0,NaN,NaN,0
-02-24-2020,1,0,0,1,0.0,0.0,Infinity
+02-24-2020,1,0,0,1,0.0,0.0,0
 02-25-2020,1,0,0,1,0.0,0.0,0.0
 02-26-2020,5,0,0,5,0.0,0.0,4.0
 02-27-2020,7,0,0,7,0.0,0.0,0.4
