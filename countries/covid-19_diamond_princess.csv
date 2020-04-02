@@ -1,5 +1,5 @@
 date,total_confirmed,total_deaths,total_recovered,total_infected,mortality_rate,recovery_rate,daily_growth_rate
-03-25-2020,712,10,587,125,1.4,82.44,0.0
+03-25-2020,712,10,587,125,1.4,82.44,0
 03-26-2020,712,10,597,115,1.4,83.85,0.0
 03-27-2020,712,10,597,115,1.4,83.85,0.0
 03-28-2020,712,10,597,115,1.4,83.85,0.0
