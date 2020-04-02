@@ -68,7 +68,7 @@ csv_files.each do |csv_file|
       countries[c]["recovery_rate"] = (countries[c]["total_recovered"].to_f / countries[c]["total_confirmed"] * 100).round(2)
       unless data.last.nil? || data.last[c].nil?
         countries[c]["previous_total_confirmed"] = data.last[c]["total_confirmed"]
-	countries[c]["daily_growth_rate"] = ((countries[c]["total_confirmed"] - countries[c]["previous_total_confirmed"]).abs.to_f / countries[c]["previous_total_confirmed"]).abs.round(2)
+        countries[c]["daily_growth_rate"] = ((countries[c]["total_confirmed"] - countries[c]["previous_total_confirmed"]).abs.to_f / countries[c]["previous_total_confirmed"])
       else
         countries[c]["previous_total_confirmed"] = 0
         countries[c]["daily_growth_rate"] = 0
@@ -87,7 +87,7 @@ CSV.open("covid-19_countries_list.csv", "wb") do |csx|
 
   countries_list.each do |c|
     c_name = c.downcase.strip.tr(" ", "_").tr("(", "").tr(")","").tr("*","").tr("'","").tr(",", "")
-    puts c_name
+    # puts c_name
     csx << [c, c_name]
     CSV.open("countries/covid-19_#{c_name}.csv", "wb") do |csv|
       # Write the CSV report titles
