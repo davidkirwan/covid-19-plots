@@ -18,6 +18,14 @@ image::covid-19_mortality_rate.png[covid19-m]
 image::covid-19_daily_growth_rate.png[covid19-g]
 
 
+Check the `+countries+` directory to view individual countries plots/data. eg: USA:
+
+
+.COVID-19 The US
+[#img-covid19-us]
+image::countries/covid-19_us.png[covid19 The US]
+
+
 === Prerequisites:
 The following are required to clone the repo containing the raw data, process the data and build the plots etc:
 
