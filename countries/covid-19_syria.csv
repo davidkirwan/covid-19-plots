@@ -12,3 +12,4 @@ date,total_confirmed,total_deaths,total_recovered,total_infected,mortality_rate,
 04-01-2020,10,2,0,10,20.0,0.0,0.0
 04-02-2020,16,2,0,16,12.5,0.0,0.6
 04-03-2020,16,2,0,16,12.5,0.0,0.0
+04-04-2020,16,2,2,14,12.5,12.5,0.0
