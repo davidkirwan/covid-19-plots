@@ -3,3 +3,4 @@ date,total_confirmed,total_deaths,total_recovered,total_infected,mortality_rate,
 04-06-2020,1,0,0,1,0.0,0.0,0.0
 04-07-2020,2,0,0,2,0.0,0.0,1.0
 04-08-2020,2,0,0,2,0.0,0.0,0.0
+04-09-2020,3,0,0,3,0.0,0.0,0.5
