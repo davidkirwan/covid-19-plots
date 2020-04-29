@@ -64,15 +64,15 @@ for(i in 1:nrow(countries)){
 
   png(filename=paste("countries/covid-19_", countries$key[i], "_daily_growth_rate.png", sep=""))
   par(mar=c(6.1,5.1,4.1,2.1))
-  colYMin <- min(data$daily_growth_rate, na.rm = TRUE)
-  colYMax <- max(data$daily_growth_rate*100, na.rm = TRUE)
+  colYMin <- min(data$daily_growth_rate, na.rm = TRUE)*100-100
+  colYMax <- max(data$daily_growth_rate, na.rm = TRUE)*100-100
   colXMax <- length(data$date)
   plot(1, type="n", main=paste("COVID-19", countries$Country.Name[i], "Daily Growth Rate %"), axes=FALSE, xlab="", ylab="", xlim=c(0, colXMax), ylim=c(colYMin, colYMax), las=2)
   axis(1, at=1:colXMax, las=2, lab=data$date)
-  axis(2, at=seq(colYMin, colYMax, by=colYMax/5), las=1)
+  axis(2, at=seq(colYMin, colYMax, by=colYMax/5.0), las=1)
   legend(1, colYMax, legend=c("Daily Growth Rate %"),
          col=c("red"), lty=1:2, cex=0.8)
-  lines((data$daily_growth_rate * 100)~data$date, col='red', lwd=2)
+  lines((data$daily_growth_rate * 100-100)~data$date, col='red', lwd=2)
   dev.off()
 
 }
