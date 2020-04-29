@@ -72,5 +72,5 @@ axis(1, at=1:colXMax, las=2, lab=data$date)
 axis(2, at=seq(0, max(data$daily_growth_rate*100), by=colYMax/5), las=1)
 legend(1, colYMax, legend=c("Growth Rate %"),
        col=c("red"), lty=1:2, cex=0.8)
-lines((data$daily_growth_rate / 100)~data$date, col='red', lwd=2)
+lines((data$daily_growth_rate * 100)~data$date, col='red', lwd=2)
 dev.off()
