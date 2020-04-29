@@ -72,7 +72,7 @@ for(i in 1:nrow(countries)){
   axis(2, at=seq(colYMin, colYMax, by=colYMax/5), las=1)
   legend(1, colYMax, legend=c("Daily Growth Rate %"),
          col=c("red"), lty=1:2, cex=0.8)
-  lines((data$daily_growth_rate * 100)~data$date, col='red', lwd=2)
+  lines((data$daily_growth_rate / 100)~data$date, col='red', lwd=2)
   dev.off()
 
 }
