@@ -46,9 +46,9 @@ CSV.open("covid-19.csv", "wb") do |csv|
     recovery_rate = (total_recovered.to_f / total_confirmed * 100).round(2)
 
     if previous_total_infected == 0
-      daily_growth_rate = 0
+      daily_growth_rate = 1
     else
-      daily_growth_rate = '%.2f' % ((total_infected - previous_total_infected).abs.to_f / previous_total_infected)
+      daily_growth_rate = '%.2f' % (1 + ((total_infected - previous_total_infected).abs.to_f / previous_total_infected))
     end
 
     previous_total_infected = total_infected

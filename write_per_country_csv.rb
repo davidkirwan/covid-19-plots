@@ -95,17 +95,17 @@ CSV.open("covid-19_countries_list.csv", "wb") do |csx|
           
           if i == 0
             d[c]["previous_total_confirmed"] = 0
-            d[c]["daily_growth_rate"] = 0
+            d[c]["daily_growth_rate"] = 1
           else
             if data[i-1][c].nil?
               d[c]["previous_total_confirmed"] = 0
-              d[c]["daily_growth_rate"] = 0
+              d[c]["daily_growth_rate"] = 1
             else
               d[c]["previous_total_confirmed"] = data[i-1][c]["total_confirmed"]
               if d[c]["previous_total_confirmed"] == 0
-                d[c]["daily_growth_rate"] = 0
+                d[c]["daily_growth_rate"] = 1
               else
-                d[c]["daily_growth_rate"] = ((d[c]["total_confirmed"] - d[c]["previous_total_confirmed"]).abs.to_f / d[c]["previous_total_confirmed"])
+                d[c]["daily_growth_rate"] = (1+ ((d[c]["total_confirmed"] - d[c]["previous_total_confirmed"]).abs.to_f / d[c]["previous_total_confirmed"]))
               end
             end
           end
