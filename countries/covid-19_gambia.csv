@@ -38,3 +38,4 @@ date,total_confirmed,total_deaths,total_recovered,total_infected,mortality_rate,
 04-27-2020,10,1,8,2,10.0,80.0,1.0
 04-28-2020,10,1,8,2,10.0,80.0,1.0
 04-29-2020,10,1,8,2,10.0,80.0,1.0
+04-30-2020,11,1,8,3,9.09,72.73,1.1
