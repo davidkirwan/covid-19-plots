@@ -1,10 +1,13 @@
 Country Name,key
 US,us
 Italy,italy
+Brazil,brazil
+Mexico,mexico
 Canada,canada
 Spain,spain
 United Kingdom,united_kingdom
 China,china
+Chile,chile
 Netherlands,netherlands
 Australia,australia
 Germany,germany
@@ -32,7 +35,6 @@ Bhutan,bhutan
 Bolivia,bolivia
 Bosnia and Herzegovina,bosnia_and_herzegovina
 Botswana,botswana
-Brazil,brazil
 Brunei,brunei
 Bulgaria,bulgaria
 Burkina Faso,burkina_faso
@@ -43,7 +45,6 @@ Cambodia,cambodia
 Cameroon,cameroon
 Central African Republic,central_african_republic
 Chad,chad
-Chile,chile
 Colombia,colombia
 Comoros,comoros
 Congo (Brazzaville),congo_brazzaville
@@ -116,7 +117,6 @@ Mali,mali
 Malta,malta
 Mauritania,mauritania
 Mauritius,mauritius
-Mexico,mexico
 Moldova,moldova
 Monaco,monaco
 Mongolia,mongolia
