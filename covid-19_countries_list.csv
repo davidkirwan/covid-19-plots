@@ -3,7 +3,10 @@ US,us
 Italy,italy
 Brazil,brazil
 Mexico,mexico
+Japan,japan
 Canada,canada
+Colombia,colombia
+Peru,peru
 Spain,spain
 United Kingdom,united_kingdom
 China,china
@@ -45,7 +48,6 @@ Cambodia,cambodia
 Cameroon,cameroon
 Central African Republic,central_african_republic
 Chad,chad
-Colombia,colombia
 Comoros,comoros
 Congo (Brazzaville),congo_brazzaville
 Congo (Kinshasa),congo_kinshasa
@@ -91,7 +93,6 @@ Iraq,iraq
 Ireland,ireland
 Israel,israel
 Jamaica,jamaica
-Japan,japan
 Jordan,jordan
 Kazakhstan,kazakhstan
 Kenya,kenya
@@ -136,7 +137,6 @@ Pakistan,pakistan
 Panama,panama
 Papua New Guinea,papua_new_guinea
 Paraguay,paraguay
-Peru,peru
 Philippines,philippines
 Poland,poland
 Portugal,portugal
