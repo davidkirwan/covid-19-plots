@@ -2,6 +2,7 @@ Country Name,key
 US,us
 Italy,italy
 Brazil,brazil
+Russia,russia
 Mexico,mexico
 Japan,japan
 Canada,canada
@@ -14,6 +15,8 @@ Chile,chile
 Netherlands,netherlands
 Australia,australia
 Germany,germany
+Sweden,sweden
+Ukraine,ukraine
 Denmark,denmark
 France,france
 Afghanistan,afghanistan
@@ -142,7 +145,6 @@ Poland,poland
 Portugal,portugal
 Qatar,qatar
 Romania,romania
-Russia,russia
 Rwanda,rwanda
 Saint Kitts and Nevis,saint_kitts_and_nevis
 Saint Lucia,saint_lucia
@@ -163,7 +165,6 @@ South Sudan,south_sudan
 Sri Lanka,sri_lanka
 Sudan,sudan
 Suriname,suriname
-Sweden,sweden
 Switzerland,switzerland
 Syria,syria
 Taiwan*,taiwan
@@ -176,7 +177,6 @@ Trinidad and Tobago,trinidad_and_tobago
 Tunisia,tunisia
 Turkey,turkey
 Uganda,uganda
-Ukraine,ukraine
 United Arab Emirates,united_arab_emirates
 Uruguay,uruguay
 Uzbekistan,uzbekistan
