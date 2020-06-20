@@ -6,8 +6,8 @@
 #
 # @date 2020-03-27
 ####################################################################################################
-REPO=/home/dkirwan/files/git_repos/github/COVID-19/
-DATA=$(REPO)/csse_covid_19_data/csse_covid_19_daily_reports/
+COVID19_PATH ?= /home/dkirwan/files/git_repos/github/COVID-19/
+DATA=$(COVID19_PATH)/csse_covid_19_data/csse_covid_19_daily_reports/
 ##############################
 .DEFAULT_GOAL:=help
 
@@ -24,7 +24,7 @@ help: ## Show this help screen
 
 .PHONY: pull
 pull: ## Pull down the latest raw data from  CSSEGISandData/COVID-19
-	cd $(REPO) && git pull origin master && cd -
+	cd $(COVID19_PATH) && git pull origin master && cd -
 
 
 ##############################
