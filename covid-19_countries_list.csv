@@ -1,189 +1,189 @@
 Country Name,key
 US,us
-Italy,italy
-Brazil,brazil
-Russia,russia
-Mexico,mexico
-Japan,japan
-Canada,canada
-Colombia,colombia
-Peru,peru
-Spain,spain
-India,india
-United Kingdom,united_kingdom
-China,china
-Chile,chile
-Netherlands,netherlands
-Australia,australia
-Pakistan,pakistan
-Germany,germany
-Sweden,sweden
-Ukraine,ukraine
-Denmark,denmark
-France,france
-Afghanistan,afghanistan
-Albania,albania
-Algeria,algeria
-Andorra,andorra
-Angola,angola
 Antigua and Barbuda,antigua_and_barbuda
-Argentina,argentina
-Armenia,armenia
-Austria,austria
-Azerbaijan,azerbaijan
-Bahamas,bahamas
-Bahrain,bahrain
-Bangladesh,bangladesh
-Barbados,barbados
-Belarus,belarus
-Belgium,belgium
-Belize,belize
-Benin,benin
-Bhutan,bhutan
-Bolivia,bolivia
-Bosnia and Herzegovina,bosnia_and_herzegovina
-Botswana,botswana
-Brunei,brunei
-Bulgaria,bulgaria
-Burkina Faso,burkina_faso
-Burma,burma
-Burundi,burundi
-Cabo Verde,cabo_verde
-Cambodia,cambodia
-Cameroon,cameroon
-Central African Republic,central_african_republic
-Chad,chad
-Comoros,comoros
-Congo (Brazzaville),congo_brazzaville
-Congo (Kinshasa),congo_kinshasa
-Costa Rica,costa_rica
-Cote d'Ivoire,cote_divoire
-Croatia,croatia
-Cuba,cuba
-Cyprus,cyprus
-Czechia,czechia
-Diamond Princess,diamond_princess
-Djibouti,djibouti
-Dominica,dominica
-Dominican Republic,dominican_republic
-Ecuador,ecuador
-Egypt,egypt
-El Salvador,el_salvador
-Equatorial Guinea,equatorial_guinea
 Eritrea,eritrea
-Estonia,estonia
-Eswatini,eswatini
-Ethiopia,ethiopia
-Fiji,fiji
-Finland,finland
-Gabon,gabon
-Gambia,gambia
-Georgia,georgia
-Ghana,ghana
-Greece,greece
-Grenada,grenada
-Guatemala,guatemala
-Guinea,guinea
-Guinea-Bissau,guinea-bissau
-Guyana,guyana
-Haiti,haiti
-Holy See,holy_see
-Honduras,honduras
-Hungary,hungary
-Iceland,iceland
-Indonesia,indonesia
-Iran,iran
-Iraq,iraq
-Ireland,ireland
 Israel,israel
-Jamaica,jamaica
-Jordan,jordan
-Kazakhstan,kazakhstan
-Kenya,kenya
-South Korea,south_korea
-Kosovo,kosovo
-Kuwait,kuwait
-Kyrgyzstan,kyrgyzstan
-Laos,laos
-Latvia,latvia
-Lebanon,lebanon
-Lesotho,lesotho
-Liberia,liberia
-Libya,libya
-Liechtenstein,liechtenstein
-Lithuania,lithuania
-Luxembourg,luxembourg
-MS Zaandam,ms_zaandam
-Madagascar,madagascar
-Malawi,malawi
-Malaysia,malaysia
-Maldives,maldives
-Mali,mali
-Malta,malta
-Mauritania,mauritania
-Mauritius,mauritius
-Moldova,moldova
-Monaco,monaco
-Mongolia,mongolia
-Montenegro,montenegro
-Morocco,morocco
-Mozambique,mozambique
-Namibia,namibia
-Nepal,nepal
-New Zealand,new_zealand
-Nicaragua,nicaragua
-Niger,niger
-Nigeria,nigeria
-North Macedonia,north_macedonia
-Norway,norway
 Oman,oman
-Panama,panama
-Papua New Guinea,papua_new_guinea
-Paraguay,paraguay
-Philippines,philippines
-Poland,poland
-Portugal,portugal
-Qatar,qatar
-Romania,romania
-Rwanda,rwanda
-Saint Kitts and Nevis,saint_kitts_and_nevis
-Saint Lucia,saint_lucia
-Saint Vincent and the Grenadines,saint_vincent_and_the_grenadines
-San Marino,san_marino
-Sao Tome and Principe,sao_tome_and_principe
-Saudi Arabia,saudi_arabia
-Senegal,senegal
-Serbia,serbia
-Seychelles,seychelles
-Sierra Leone,sierra_leone
-Singapore,singapore
-Slovakia,slovakia
-Slovenia,slovenia
-Somalia,somalia
-South Africa,south_africa
-South Sudan,south_sudan
-Sri Lanka,sri_lanka
-Sudan,sudan
-Suriname,suriname
-Switzerland,switzerland
-Syria,syria
-Taiwan*,taiwan
-Tajikistan,tajikistan
-Tanzania,tanzania
-Thailand,thailand
-Timor-Leste,timor-leste
-Togo,togo
-Trinidad and Tobago,trinidad_and_tobago
-Tunisia,tunisia
-Turkey,turkey
-Uganda,uganda
+Dominican Republic,dominican_republic
 United Arab Emirates,united_arab_emirates
-Uruguay,uruguay
-Uzbekistan,uzbekistan
-Venezuela,venezuela
-Vietnam,vietnam
+El Salvador,el_salvador
 West Bank and Gaza,west_bank_and_gaza
-Western Sahara,western_sahara
-Yemen,yemen
-Zambia,zambia
+Gabon,gabon
+Tajikistan,tajikistan
+Albania,albania
+Djibouti,djibouti
 Zimbabwe,zimbabwe
+Mali,mali
+Uruguay,uruguay
+Chad,chad
+San Marino,san_marino
+Mauritius,mauritius
+Denmark,denmark
+United Kingdom,united_kingdom
+Canada,canada
+China,china
+Ukraine,ukraine
+Chile,chile
+Germany,germany
+Venezuela,venezuela
+Kenya,kenya
+Ethiopia,ethiopia
+Austria,austria
+South Korea,south_korea
+Bosnia and Herzegovina,bosnia_and_herzegovina
+North Macedonia,north_macedonia
+Lebanon,lebanon
+Croatia,croatia
+Namibia,namibia
+Slovakia,slovakia
+Suriname,suriname
+Mozambique,mozambique
+Rwanda,rwanda
+Guinea-Bissau,guinea-bissau
+New Zealand,new_zealand
+Jordan,jordan
+Liberia,liberia
+Botswana,botswana
+France,france
+Tanzania,tanzania
+Trinidad and Tobago,trinidad_and_tobago
+Belize,belize
+Saint Vincent and the Grenadines,saint_vincent_and_the_grenadines
+Saint Kitts and Nevis,saint_kitts_and_nevis
+Holy See,holy_see
+Brazil,brazil
+Italy,italy
+India,india
+Japan,japan
+Netherlands,netherlands
+Russia,russia
+Spain,spain
+Sweden,sweden
+Colombia,colombia
+Mexico,mexico
+Australia,australia
+South Africa,south_africa
+Saudi Arabia,saudi_arabia
+Bangladesh,bangladesh
+Turkey,turkey
+Qatar,qatar
+Bolivia,bolivia
+Portugal,portugal
+Switzerland,switzerland
+Uzbekistan,uzbekistan
+Cameroon,cameroon
+Congo (Kinshasa),congo_kinshasa
+Equatorial Guinea,equatorial_guinea
+Eswatini,eswatini
+Lithuania,lithuania
+Jamaica,jamaica
+Burundi,burundi
+Fiji,fiji
+Timor-Leste,timor-leste
+Dominica,dominica
+MS Zaandam,ms_zaandam
+Peru,peru
+Pakistan,pakistan
+Philippines,philippines
+Honduras,honduras
+Ghana,ghana
+Kyrgyzstan,kyrgyzstan
+Afghanistan,afghanistan
+Morocco,morocco
+Moldova,moldova
+Czechia,czechia
+Bulgaria,bulgaria
+Madagascar,madagascar
+Senegal,senegal
+Malaysia,malaysia
+Zambia,zambia
+Haiti,haiti
+Libya,libya
+Maldives,maldives
+Congo (Brazzaville),congo_brazzaville
+Thailand,thailand
+Cuba,cuba
+Slovenia,slovenia
+Gambia,gambia
+Cyprus,cyprus
+Georgia,georgia
+Andorra,andorra
+Sao Tome and Principe,sao_tome_and_principe
+Diamond Princess,diamond_princess
+Mongolia,mongolia
+Monaco,monaco
+Seychelles,seychelles
+Laos,laos
+Serbia,serbia
+Indonesia,indonesia
+Kazakhstan,kazakhstan
+Belarus,belarus
+Singapore,singapore
+Armenia,armenia
+Guinea,guinea
+Greece,greece
+Montenegro,montenegro
+Sri Lanka,sri_lanka
+Benin,benin
+Tunisia,tunisia
+Angola,angola
+Bahamas,bahamas
+Liechtenstein,liechtenstein
+Western Sahara,western_sahara
+Iceland,iceland
+Iran,iran
+Egypt,egypt
+Panama,panama
+Azerbaijan,azerbaijan
+Ireland,ireland
+Nepal,nepal
+Cote d'Ivoire,cote_divoire
+Sudan,sudan
+Norway,norway
+Finland,finland
+Luxembourg,luxembourg
+Hungary,hungary
+Central African Republic,central_african_republic
+Cabo Verde,cabo_verde
+Burkina Faso,burkina_faso
+Togo,togo
+Guyana,guyana
+Comoros,comoros
+Cambodia,cambodia
+Brunei,brunei
+Taiwan*,taiwan
+Argentina,argentina
+Belgium,belgium
+Poland,poland
+Algeria,algeria
+Costa Rica,costa_rica
+Mauritania,mauritania
+Malawi,malawi
+Sierra Leone,sierra_leone
+Yemen,yemen
+Syria,syria
+Uganda,uganda
+Niger,niger
+Malta,malta
+Lesotho,lesotho
+Burma,burma
+Barbados,barbados
+Guatemala,guatemala
+Nigeria,nigeria
+Paraguay,paraguay
+Nicaragua,nicaragua
+Somalia,somalia
+South Sudan,south_sudan
+Estonia,estonia
+Latvia,latvia
+Vietnam,vietnam
+Papua New Guinea,papua_new_guinea
+Saint Lucia,saint_lucia
+Bhutan,bhutan
+Kosovo,kosovo
+Iraq,iraq
+Ecuador,ecuador
+Kuwait,kuwait
+Romania,romania
+Bahrain,bahrain
+Grenada,grenada
