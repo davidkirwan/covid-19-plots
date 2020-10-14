@@ -17,7 +17,7 @@ lmMod <- lm(total_deaths ~ total_confirmed, data=data)  # build the model
 summary (lmMod)
 
 date = c("01-06-2020", "02-06-2020")
-total_confirmed = c(50000000, 100000000)
+total_confirmed = c(500000000, 1000000000)
 df = data.frame(date, total_confirmed)
 
 tdp <- predict(lmMod, df)  # predict death total at 1000000, 2000000
