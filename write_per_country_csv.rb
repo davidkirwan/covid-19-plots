@@ -77,6 +77,7 @@ CSV.open("covid-19_countries_list.csv", "wb") do |csx|
   csx << ["Country Name", "key"]
 
   countries_list.each do |c|
+    if c.nil? then next end
     c_name = c.downcase.strip.tr(" ", "_").tr("(", "").tr(")","").tr("*","").tr("'","").tr(",", "")
     # puts c_name
     csx << [c, c_name]
