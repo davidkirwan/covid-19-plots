@@ -10,17 +10,21 @@
 # Read the data in
 # ["Date", "Total Confirmed", "Total Deaths", "Total Recovered", "Total Infected", "Mortality Rate", "Recovery Rate"]
 data <- read.table("covid-19.csv", header=TRUE, sep=",")
+# data$date <- as.Date(data$date, format = "%Y-%m-%d")
+print(data$total_confirmed)
+print(data$date)
+
 
 # Correlation total confirmed vs total deaths
 print(cor(data$total_confirmed, data$total_deaths))
 lmMod <- lm(total_deaths ~ total_confirmed, data=data)  # build the model
 summary (lmMod)
 
-date = c("01-06-2020", "02-06-2020")
-total_confirmed = c(500000000, 1000000000)
+date = c("01-06-2020", "02-06-2021")
+total_confirmed = c(1000000000, 7000000000)
 df = data.frame(date, total_confirmed)
 
-tdp <- predict(lmMod, df)  # predict death total at 1000000, 2000000
+tdp <- predict(lmMod, df)  # predict death total at 1bill, 7bill
 print(tdp)
 
 # Create the plots
@@ -33,10 +37,10 @@ axis(1, at=1:colXMax, las=2, lab=data$date)
 axis(2, at=seq(0, max(data$total_confirmed), by=max(data$total_confirmed)/5), las=1)
 legend(1, colYMax, legend=c("Total Confirmed", "Total Infected", "Total Recovered", "Total Deaths"),
        col=c("blue", "orange", "green", "red"), lty=1:2, cex=0.8)
-lines(data$total_confirmed~data$date, col='blue', lwd=2)
-lines(data$total_infected~data$date, col='orange', lwd=2)
-lines(data$total_recovered~data$date, col='green', lwd=2)
-lines(data$total_deaths~data$date, col='red', lwd=2)
+lines(data$total_confirmed, col='blue', lwd=2)
+lines(data$total_infected, col='orange', lwd=2)
+lines(data$total_recovered, col='green', lwd=2)
+lines(data$total_deaths, col='red', lwd=2)
 dev.off()
 
 png(filename="covid-19_deaths.png")
@@ -48,7 +52,7 @@ axis(1, at=1:colXMax, las=2, lab=data$date)
 axis(2, at=seq(0, max(data$total_deaths), by=max(data$total_deaths)/5), las=1)
 legend(1, colYMax, legend=c("Total Deaths"),
        col=c("red"), lty=1:2, cex=0.8)
-lines(data$total_deaths~data$date, col='red', lwd=2)
+lines(data$total_deaths, col='red', lwd=2)
 dev.off()
 
 png(filename="covid-19_mortality_rate.png")
@@ -60,7 +64,7 @@ axis(1, at=1:colXMax, las=2, lab=data$date)
 axis(2, at=seq(2, max(data$mortality_rate), by=0.1), las=1)
 legend(1, colYMax, legend=c("Total Mortality Rate %"),
        col=c("red"), lty=1:2, cex=0.8)
-lines(data$mortality_rate~data$date, col='red', lwd=2)
+lines(data$mortality_rate, col='red', lwd=2)
 dev.off()
 
 png(filename="covid-19_daily_growth_rate.png")
@@ -72,5 +76,5 @@ axis(1, at=1:colXMax, las=2, lab=data$date)
 axis(2, at=seq(0, max(data$daily_growth_rate*100), by=colYMax/5), las=1)
 legend(1, colYMax, legend=c("Growth Rate %"),
        col=c("red"), lty=1:2, cex=0.8)
-lines((data$daily_growth_rate * 100-100)~data$date, col='red', lwd=2)
+lines((data$daily_growth_rate * 100-100), col='red', lwd=2)
 dev.off()

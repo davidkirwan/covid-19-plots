@@ -31,10 +31,10 @@ for(i in 1:nrow(countries)){
   axis(2, at=seq(0, colYMax, by=max(data$total_confirmed)/5), las=1)
   legend(1, colYMax, legend=c("Total Confirmed", "Total Infected", "Total Recovered", "Total Deaths"),
          col=c("blue", "orange", "green", "red"), lty=1:2, cex=0.8)
-  lines(data$total_confirmed~data$date, col='blue', lwd=2)
-  lines(data$total_infected~data$date, col='orange', lwd=2)
-  lines(data$total_recovered~data$date, col='green', lwd=2)
-  lines(data$total_deaths~data$date, col='red', lwd=2)
+  lines(data$total_confirmed, col='blue', lwd=2)
+  lines(data$total_infected, col='orange', lwd=2)
+  lines(data$total_recovered, col='green', lwd=2)
+  lines(data$total_deaths, col='red', lwd=2)
   dev.off()
 
   png(filename=paste("countries/covid-19_", countries$key[i], "_deaths.png", sep=""))
@@ -46,7 +46,7 @@ for(i in 1:nrow(countries)){
   axis(2, at=seq(0, colYMax, by=max(data$total_deaths)/5), las=1)
   legend(1, colYMax, legend=c("Total Deaths"),
          col=c("red"), lty=1:2, cex=0.8)
-  lines(data$total_deaths~data$date, col='red', lwd=2)
+  lines(data$total_deaths, col='red', lwd=2)
   dev.off()
 
   png(filename=paste("countries/covid-19_", countries$key[i], "_mortality_rate.png", sep=""))
@@ -59,7 +59,7 @@ for(i in 1:nrow(countries)){
   axis(2, at=seq(colYMin, colYMax, by=0.1), las=1)
   legend(1, colYMax, legend=c("Total Mortality Rate %"),
          col=c("red"), lty=1:2, cex=0.8)
-  lines(data$mortality_rate~data$date, col='red', lwd=2)
+  lines(data$mortality_rate, col='red', lwd=2)
   dev.off()
 
   png(filename=paste("countries/covid-19_", countries$key[i], "_daily_growth_rate.png", sep=""))
@@ -72,7 +72,7 @@ for(i in 1:nrow(countries)){
   axis(2, at=seq(colYMin, colYMax, by=colYMax/5.0), las=1)
   legend(1, colYMax, legend=c("Daily Growth Rate %"),
          col=c("red"), lty=1:2, cex=0.8)
-  lines((data$daily_growth_rate * 100-100)~data$date, col='red', lwd=2)
+  lines((data$daily_growth_rate * 100-100), col='red', lwd=2)
   dev.off()
 
 }

@@ -17,7 +17,7 @@ puts ARGV[0]
 data_dir = ARGV[0]
 
 # Get the list of CSV files in location
-csv_files = Dir[data_dir+"*.csv"].sort
+csv_files = Dir[data_dir+"*.csv"].sort! { |a,b|  DateTime.strptime(File.basename(a, ".*"), "%m-%d-%Y") <=> DateTime.strptime(File.basename(b, ".*"), "%m-%d-%Y") }
 
 # Each file generate data per country
 csv_files.each do |csv_file|
@@ -62,8 +62,8 @@ csv_files.each do |csv_file|
       countries[c]["total_deaths"] += i[deaths].to_i
       countries[c]["total_recovered"] += i[recovered].to_i
       countries[c]["total_infected"] = countries[c]["total_confirmed"] - countries[c]["total_recovered"]
-      countries[c]["mortality_rate"] = (countries[c]["total_deaths"].to_f / countries[c]["total_confirmed"] * 100).round(2)
-      countries[c]["recovery_rate"] = (countries[c]["total_recovered"].to_f / countries[c]["total_confirmed"] * 100).round(2)
+      countries[c]["mortality_rate"] = (countries[c]["total_deaths"].to_f / countries[c]["total_confirmed"] * 100).round(2).to_f
+      countries[c]["recovery_rate"] = (countries[c]["total_recovered"].to_f / countries[c]["total_confirmed"] * 100).round(2).to_f
     end
   end
 
@@ -96,10 +96,14 @@ CSV.open("covid-19_countries_list.csv", "wb") do |csx|
           
           if i == 0
             d[c]["previous_total_confirmed"] = 0
+            d[c]["mortality_rate"] = 0.0
+            d[c]["recovery_rate"] = 0.0
             d[c]["daily_growth_rate"] = 1
           else
             if data[i-1][c].nil?
               d[c]["previous_total_confirmed"] = 0
+              d[c]["mortality_rate"] = 0.0
+              d[c]["recovery_rate"] = 0.0
               d[c]["daily_growth_rate"] = 1
             else
               d[c]["previous_total_confirmed"] = data[i-1][c]["total_confirmed"]

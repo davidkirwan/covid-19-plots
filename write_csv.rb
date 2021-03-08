@@ -6,6 +6,7 @@
 # Working with the COVID-19 data
 ######################################################
 require "csv"
+require "date"
 
 previous_total_infected = 0
 
@@ -19,7 +20,7 @@ CSV.open("covid-19.csv", "wb") do |csv|
   puts ARGV[0]
   data_dir = ARGV[0]
 
-  csv_files = Dir[data_dir+"*.csv"].sort
+  csv_files = Dir[data_dir+"*.csv"].sort! { |a,b|  DateTime.strptime(File.basename(a, ".*"), "%m-%d-%Y") <=> DateTime.strptime(File.basename(b, ".*"), "%m-%d-%Y") }
   csv_files.each do |csv_file|
     results = Array.new
     CSV.foreach(csv_file) do |row|
