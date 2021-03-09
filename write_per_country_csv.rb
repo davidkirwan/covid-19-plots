@@ -47,14 +47,19 @@ csv_files.each do |csv_file|
       c = "South Korea"
     end
     if countries[c].nil?
+      total_confirmed = i[confirmed].to_i
+      total_deaths = i[deaths].to_f
+      if total_deaths > total_confirmed
+        total_confirmed = total_deaths
+      end
       countries[c] = {
         "date" => File.basename(csv_file, ".*"),
-        "total_confirmed" => i[confirmed].to_i,
+        "total_confirmed" => total_confirmed,
         "total_deaths" => i[deaths].to_i,
         "total_recovered" => i[recovered].to_i,
         "total_infected" => i[confirmed].to_i - i[recovered].to_i,
-        "mortality_rate" => (i[deaths].to_f / i[confirmed].to_i * 100).round(2),
-        "recovery_rate" => (i[recovered].to_f / i[confirmed].to_i * 100).round(2)
+        "mortality_rate" => (i[deaths].to_f / total_confirmed * 100).round(2),
+        "recovery_rate" => (i[recovered].to_f / total_confirmed * 100).round(2)
       }
     else
       countries[c]["date"] = File.basename(csv_file, ".*")
