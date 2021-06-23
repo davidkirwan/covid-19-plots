@@ -36,6 +36,8 @@ CSV.open("covid-19.csv", "wb") do |csv|
     total_confirmed = 0
     total_deaths = 0
     total_recovered = 0
+    mortality_rate = 0
+    recovery_rate = 0
 
     results.each do |i|
       total_confirmed += i[confirmed].to_i
@@ -43,8 +45,12 @@ CSV.open("covid-19.csv", "wb") do |csv|
       total_recovered += i[recovered].to_i
     end
     total_infected = total_confirmed - total_recovered
-    mortality_rate = (total_deaths.to_f / total_confirmed * 100).round(2)
-    recovery_rate = (total_recovered.to_f / total_confirmed * 100).round(2)
+    unless total_deaths == 0
+      mortality_rate = (total_deaths.to_f / total_confirmed * 100).round(2)
+    end
+    unless total_recovered == 0
+      recovery_rate = (total_recovered.to_f / total_confirmed * 100).round(2) unless total_recovered.to_i == 0
+    end
 
     if previous_total_infected == 0
       daily_growth_rate = 1

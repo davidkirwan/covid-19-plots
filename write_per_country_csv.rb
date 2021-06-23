@@ -96,8 +96,16 @@ CSV.open("covid-19_countries_list.csv", "wb") do |csx|
           total_deaths = d[c]["total_deaths"]
           total_recovered = d[c]["total_recovered"]
           total_infected = d[c]["total_infected"]
-          mortality_rate = d[c]["mortality_rate"]
-          recovery_rate = d[c]["recovery_rate"]
+          if d[c]["mortality_rate"] > 0
+            mortality_rate = d[c]["mortality_rate"]
+          else
+            mortality_rate = 0
+          end
+          if d[c]["recovery_rate"] > 0
+            recovery_rate = d[c]["recovery_rate"]
+          else
+            recovery_rate = 0
+          end
           
           if i == 0
             d[c]["previous_total_confirmed"] = 0
