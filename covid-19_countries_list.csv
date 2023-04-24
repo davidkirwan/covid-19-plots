@@ -4,6 +4,7 @@ Albania,albania
 Algeria,algeria
 Andorra,andorra
 Angola,angola
+Antarctica,antarctica
 Antigua and Barbuda,antigua_and_barbuda
 Argentina,argentina
 Armenia,armenia
@@ -91,6 +92,7 @@ Jordan,jordan
 Kazakhstan,kazakhstan
 Kenya,kenya
 Kiribati,kiribati
+"Korea, North",korea_north
 South Korea,south_korea
 Kosovo,kosovo
 Kuwait,kuwait
@@ -123,6 +125,7 @@ Montenegro,montenegro
 Morocco,morocco
 Mozambique,mozambique
 Namibia,namibia
+Nauru,nauru
 Nepal,nepal
 Netherlands,netherlands
 New Zealand,new_zealand
@@ -177,9 +180,11 @@ Tanzania,tanzania
 Thailand,thailand
 Timor-Leste,timor-leste
 Togo,togo
+Tonga,tonga
 Trinidad and Tobago,trinidad_and_tobago
 Tunisia,tunisia
 Turkey,turkey
+Tuvalu,tuvalu
 US,us
 Uganda,uganda
 Ukraine,ukraine
@@ -191,6 +196,7 @@ Vanuatu,vanuatu
 Venezuela,venezuela
 Vietnam,vietnam
 West Bank and Gaza,west_bank_and_gaza
+Winter Olympics 2022,winter_olympics_2022
 Yemen,yemen
 Zambia,zambia
 Zimbabwe,zimbabwe
